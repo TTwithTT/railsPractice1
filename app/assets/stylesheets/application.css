@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+form {
+  display: block;
+  margin-top: 0em;
+}
+footer h1 {
+  display: inline;
+}

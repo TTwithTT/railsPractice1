@@ -1,0 +1,40 @@
+<h3>スケジュール一覧</h3>
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>タイトル</th>
+			<th>開始日</th>
+			<th>終了日</th>
+			<th>終日</th>
+			<th>スケジュール更新日時</th>
+			<th>確認</th>
+			<th>編集</th>
+			<th>削除</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @schedules.each do |schedule| %>
+			<tr>
+				<td><%= schedule.id %></td>
+				<td><%= schedule.title %></td>
+				<td><%= l schedule.startedDay %></td>
+				<td><%= l schedule.endedDay %></td>
+				<td><%= schedule.allDay ? 'O' : 'X' %></td>
+				<td><%= l schedule.updated_at %></td>
+				<td><%= link_to "確認", schedule %></td>
+				<td><%= link_to "編集", [:edit, schedule] %></td>
+				<td><%= link_to "削除", schedule, data: { turbo_method: :delete, turbo_confirm: '削除しますか？' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<p><%= link_to "スケジュール新規登録", :new_schedule %></p>
+
+<footer>
+		<h1>今日の日付 : <%= l Date.today %></h1>
+		<h1>&nbsp;予定数 : <%= @schedules.count %></h1>
+</footer>

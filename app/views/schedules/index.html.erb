@@ -22,8 +22,8 @@
 				<td><%= schedule.title %></td>
 				<td><%= l schedule.startedDay %></td>
 				<td><%= l schedule.endedDay %></td>
-				<td><%= schedule.allDay ? 'O' : 'X' %></td>
-				<td><%= l schedule.updated_at %></td>
+				<td><%= schedule.allDay ? 'O' : '' %></td>
+				<td><%= l schedule.updated_at, format: :long %></td>
 				<td><%= link_to "確認", schedule %></td>
 				<td><%= link_to "編集", [:edit, schedule] %></td>
 				<td><%= link_to "削除", schedule, data: { turbo_method: :delete, turbo_confirm: '削除しますか？' } %></td>

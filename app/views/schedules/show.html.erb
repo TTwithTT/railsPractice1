@@ -19,11 +19,11 @@
   </tr>
   <tr>
     <th>終日</th>
-    <td><%= @schedule.allDay ? 'O' : 'X' %></td>
+    <td><%= @schedule.allDay ? 'O' : '' %></td>
   </tr>
   <tr>
     <th>スケジュール更新日時</th>
-    <td><%= l @schedule.updated_at %></td>
+    <td><%= l @schedule.updated_at, format: :long %></td>
   </tr>
   <tr>
     <th>メモ</th>

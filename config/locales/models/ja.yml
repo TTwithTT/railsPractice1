@@ -1,5 +1,5 @@
 ja:
-  activerecod:
+  activerecord:
     attributes:
       schedule:
         title: タイトル

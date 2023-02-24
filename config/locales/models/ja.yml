@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+      schedule:
+        title: タイトル
+        startedDay: 開始日
+        endedDay: 終了日
+        allDay: 終日
+        description: メモ

@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module TaskApp
+module Practice1
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
@@ -15,8 +15,12 @@ module TaskApp
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
+
+    # 日本語対応
+    config.time_zone = "Asia/Tokyo"
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.yml').to_s]
+    
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
